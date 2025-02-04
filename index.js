@@ -82,18 +82,20 @@ function getItemsByCategory(items, category) {
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
-   const initialValue = 0;
-   const totalQuantity = inventory.reduce(
-    (0, 0) => 0 + 0, 0
-   );
+  const initialValue = 0;
+  const totalQuantity = items.reduce(
+   (accumulator, currentItem) => {return accumulator + currentItem.quantity;        
+   }, 0);
+   return totalQuantity;
 }
 
 /**
  * @param {Item[]} items - array of items
  * @returns {number} the cost of all given items
  */
-//function getTotalPrice(items) {
-  // TODO: use `reduce`
+function getTotalPrice(items) {
+  const totalItemCost = (item.price * item.quantity)
+  re
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
